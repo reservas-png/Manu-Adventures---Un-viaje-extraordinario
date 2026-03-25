@@ -436,10 +436,10 @@ body.page-programas {
 /* --- Imágenes de Fondo para cada Tarjeta (Reemplázalas) --- */
 /* (Usamos marcadores de posición, cámbialos por tus fotos reales) */
 .card-3dias { background-image: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2)), url('image/progra/RESERVADA\ 20-1-99.jpg'); }
-.card-4dias { background-image: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2)), url('image/progra/capibaras.jpg'); }
-.card-5dias { background-image: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2)), url('image/progra/FOTO002.jpg'); }
+.card-4dias { background-image: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2)), url('image/progra/foto-grupal.jpeg'); }
+.card-5dias { background-image: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2)), url('image/eN EL RIO.jpg'); }
 .card-6dias { background-image: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2)), url('image/progra/419181520_583d19b41d_b.jpg'); }
-.card-7dias { background-image: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2)), url('image/progra/foto-grupal.jpeg'); }
+.card-7dias { background-image: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2)), url('image/progra/capibaras.jpg'); }
 .card-tarifario { background-image: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2)), url('image/progra/Guacamayo\ Azul\ y\ Amarillo\ -\ Blue\ and\ Yellow\ Macaw\ -\ 8\ dias.jpg'); }
 
 /* INSIGNIA DE TARJETA (El círculo de días) */
