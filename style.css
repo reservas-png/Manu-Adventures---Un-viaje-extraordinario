@@ -1403,3 +1403,243 @@ body.page-programa-detalle {
     box-shadow: 0 10px 20px rgba(0,0,0,0.2); /* Sombra elegante */
     display: block;
 }
+
+/* =========================================
+   VARIANTES DE COLOR PARA INSIGNIAS (Ej: 5 Días)
+   ========================================= */
+
+/* Fondo verde para la insignia */
+.badge-green {
+    background-color: #2b8b22 !important;
+    box-shadow: 0 0 0 6px #2b8b22, 0 10px 20px rgba(0,0,0,0.3) !important;
+}
+
+/* Para la mini insignia que no lleva sombra doble */
+.badge-mini.badge-green {
+    box-shadow: 0 0 0 5px #2b8b22 !important;
+}
+
+/* Color amarillo para el número 5 */
+.text-yellow {
+    color: #ffba54 !important; 
+}
+
+/* =========================================
+   ESTILOS ESPECÍFICOS PARA 6 DÍAS (Filas dobles y Caja Importante)
+   ========================================= */
+
+/* Modificamos la tarjeta para que acepte filas separadas */
+.card-6-dias {
+    display: flex;
+    flex-direction: column;
+    gap: 60px; /* Separación entre la fila de arriba y la de abajo */
+    padding-top: 60px;
+}
+
+/* Fila individual dentro de la tarjeta */
+.itinerary-row {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    width: 100%;
+}
+
+/* La línea punteada para cada fila */
+.itinerary-line-row {
+    position: absolute;
+    top: 15px; /* Altura ajustada para que pase justo por detrás del texto "Día" */
+    left: 10%;
+    width: 80%;
+    height: 3px;
+    border-top: 3px dashed #ff9500;
+    z-index: 1;
+}
+
+/* Caja Blanca de "IMPORTANTE" al final del itinerario detallado */
+.important-box {
+    background-color: white;
+    border-radius: 20px;
+    padding: 30px 40px;
+    margin-top: 60px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+}
+
+.important-box p {
+    color: #444 !important; /* Texto oscuro para lectura fácil */
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin-bottom: 0;
+    text-align: left;
+}
+
+.important-box .text-orange-strong {
+    color: #e65c00 !important; /* Aseguramos que la palabra IMPORTANTE resalte */
+}
+
+/* Adaptación a celulares de las filas dobles */
+@media (max-width: 768px) {
+    .itinerary-row { flex-direction: column; gap: 40px; }
+    .itinerary-line-row {
+        top: 10%; left: 50%; width: 3px; height: 80%;
+        border-top: none; border-left: 3px dashed #ff9500;
+    }
+    .important-box { padding: 25px 20px; }
+}
+
+/* Modificamos la tarjeta para que acepte filas separadas (6 y 7 días) */
+.card-6-dias, .card-7-dias {
+    display: flex;
+    flex-direction: column;
+    gap: 60px; /* Separación entre la fila de arriba y la de abajo */
+    padding-top: 60px;
+}
+
+/* =========================================
+   ESTILOS PARA "TARIFARIO 2026"
+   ========================================= */
+
+/* Fondo verde oscuro constante para toda la página */
+body.page-tarifario {
+    background-color: #17362b !important; 
+    color: white;
+}
+
+.content-tarifario {
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Variante de Insignia para Tarifario (Ajuste del tamaño de letra) */
+.badge-tarifario {
+    background-color: #e65c00 !important;
+    box-shadow: 0 0 0 6px #e65c00, 0 10px 20px rgba(0,0,0,0.3) !important;
+    padding: 10px;
+}
+
+/* Contenedor de cada tarjeta */
+.tarifario-card-wrapper {
+    position: relative;
+    margin: 80px auto;
+}
+
+/* Las Píldoras de título sobre las tarjetas */
+.pill-tarifario {
+    position: absolute;
+    top: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: white;
+    padding: 10px 30px;
+    border-radius: 30px;
+    font-weight: 800;
+    font-size: 1rem;
+    z-index: 5;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    white-space: nowrap;
+}
+
+.pill-yellow { background-color: #ff9500; } /* Naranja/Amarillo para la primera */
+.pill-orange { background-color: #e65c00; } /* Naranja oscuro para la segunda */
+
+/* La Tarjeta Blanca */
+.tarifario-card {
+    background-color: white;
+    border-radius: 25px;
+    padding: 60px 40px 40px 40px; /* Padding top más grande por la píldora */
+    box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+}
+
+/* Fila de cada precio */
+.price-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+    padding: 5px 0;
+}
+
+.program-name {
+    color: #555555;
+    font-weight: 800;
+    font-size: 0.95rem;
+}
+
+/* Etiqueta verde del precio */
+.price-tag {
+    background-color: #1e5a3a; /* Verde oscuro estilo Manu */
+    color: white;
+    font-weight: 800;
+    font-size: 1rem;
+    padding: 6px 15px;
+    border-radius: 6px;
+    letter-spacing: 0.5px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+/* Texto pequeño de Disclaimer */
+.price-disclaimer {
+    color: #666666;
+    font-size: 0.85rem;
+    line-height: 1.5;
+    font-weight: 600;
+    text-align: center;
+    margin-top: 40px;
+}
+
+/* Adaptación a celulares */
+@media (max-width: 600px) {
+    .tarifario-card { padding: 50px 20px 30px 20px; }
+    .price-row { 
+        flex-direction: column; 
+        align-items: flex-start; 
+        gap: 10px; 
+        margin-bottom: 25px;
+        border-bottom: 1px solid #eee;
+        padding-bottom: 15px;
+    }
+    .price-tag { align-self: flex-start; }
+}
+
+/* =========================================
+   BOTÓN SUTIL PARA DESCARGAR PDF
+   ========================================= */
+
+.download-pdf-container {
+    text-align: right; /* Alinea el botón a la derecha */
+    margin-top: 20px;
+    margin-bottom: -10px; /* Evita empujar demasiado el título de abajo */
+}
+
+.btn-download-pdf {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px; /* Espacio entre el ícono y el texto */
+    background-color: #f5f5f5; /* Fondo gris muy clarito y sutil */
+    color: #17362b; /* Texto verde oscuro de tu marca */
+    padding: 8px 18px;
+    border-radius: 20px; /* Bordes bien redondeados */
+    font-size: 0.85rem;
+    font-weight: 700;
+    text-decoration: none;
+    border: 1px solid #dddddd; /* Borde muy sutil */
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05); /* Sombra casi invisible */
+    transition: all 0.3s ease; /* Transición suave para el efecto hover */
+}
+
+/* Efecto al pasar el mouse por encima */
+.btn-download-pdf:hover {
+    background-color: #ff9500; /* Se vuelve naranja */
+    color: white; /* El texto y el ícono se vuelven blancos */
+    border-color: #ff9500;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+    transform: translateY(-2px); /* Se levanta un poquito */
+}
+
+/* Adaptación a celulares */
+@media (max-width: 768px) {
+    .download-pdf-container {
+        text-align: center; /* En el celular lo centramos para que sea fácil de tocar */
+        margin-bottom: 10px;
+    }
+}
