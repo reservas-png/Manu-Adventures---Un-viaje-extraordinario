@@ -493,3 +493,398 @@ body.page-programas {
     .card-badge { width: 55px; height: 55px; top: 10px; right: 10px; }
     .badge-number { font-size: 1.6rem; }
 }
+
+/* =========================================
+   ESTILOS EXTRAS PARA "CONSEJOS DE VIAJES"
+   ========================================= */
+
+/* Título blanco sin el borde naranja */
+.title-solid-white {
+    font-size: 3rem;
+    font-weight: 900;
+    color: white;
+    text-shadow: 0px 5px 15px rgba(0,0,0,0.5);
+    margin-bottom: 25px;
+    letter-spacing: 1px;
+}
+
+/* Alineación de los párrafos centrales */
+.consejos-text {
+    max-width: 800px;
+    margin: 0 auto;
+    font-size: 0.95rem;
+    line-height: 1.6;
+    text-align: left; /* Como en el diseño, el texto está justificado a la izquierda */
+    font-weight: 500;
+}
+
+.consejos-text p {
+    margin-bottom: 20px;
+}
+
+.text-orange-strong {
+    color: #ff8c00;
+    font-weight: 800;
+}
+
+.text-highlight {
+    font-weight: 700;
+    font-size: 1.05rem;
+    text-align: center;
+    margin-top: 30px;
+    margin-bottom: 20px;
+}
+
+/* El texto encerrado en naranja estilo "píldora" */
+.orange-pill {
+    background-color: #ff8c00;
+    color: white;
+    display: inline-block;
+    padding: 10px 30px;
+    border-radius: 30px;
+    font-weight: 800;
+    font-size: 1rem;
+    margin-bottom: 40px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+}
+
+/* Ajuste de encuadre específico para la foto de Rafting en Consejos */
+.hero-consejos img {
+    /* Esto obliga al navegador a enfocar la parte inferior de la foto (donde está el bote) */
+    object-position: center 85%; 
+}
+
+/* Opcional: Si en PC quieres que la franja de la imagen sea un poco más alta para que se vea más agua y árboles, puedes añadir esto: */
+@media (min-width: 1024px) {
+    .hero-consejos {
+        height: 40vw; /* Aumenta un poco el alto de la cabecera en pantallas grandes */
+        max-height: 650px;
+    }
+}
+
+/* =========================================
+   ESTILOS PARA "PREGUNTAS FRECUENTES"
+   ========================================= */
+
+/* Fondo general de la página FAQ */
+body.page-faq {
+    background: linear-gradient(135deg, #ffba54 0%, #ff9500 100%);
+    padding: 50px 20px;
+    color: white;
+}
+
+/* Encabezado */
+.faq-header {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto 40px auto;
+}
+
+.title-outline-faq {
+    font-size: 3.5rem;
+    font-weight: 900;
+    color: white;
+    -webkit-text-stroke: 8px #ff5500; /* Borde naranja intenso */
+    paint-order: stroke fill;
+    text-shadow: 0px 5px 10px rgba(0,0,0,0.2);
+    margin-bottom: 20px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.faq-intro {
+    font-size: 1rem;
+    line-height: 1.6;
+    font-weight: 500;
+}
+
+/* Contenedor de las preguntas */
+.faq-container {
+    max-width: 850px;
+    margin: 0 auto;
+}
+
+/* Tarjeta individual de pregunta */
+.faq-card {
+    background-color: white;
+    border-radius: 15px;
+    overflow: hidden; /* Para que la cabecera respete los bordes redondos */
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+    margin-bottom: 30px;
+}
+
+/* Sección de la Pregunta (Fondo melón claro) */
+.faq-question {
+    background-color: #ffe8cc; /* Naranja muy clarito */
+    color: #d54a00; /* Texto naranja oscuro/rojizo */
+    padding: 15px 30px;
+    font-size: 1.2rem;
+    font-weight: 800;
+    text-align: center;
+}
+
+/* Sección de la Respuesta (Fondo blanco) */
+.faq-answer {
+    padding: 25px 30px;
+    color: #444; /* Gris oscuro para buena lectura */
+    font-size: 0.95rem;
+    line-height: 1.6;
+    font-weight: 500;
+}
+
+.faq-answer p {
+    margin-bottom: 15px;
+}
+
+.faq-answer p:last-child {
+    margin-bottom: 0;
+}
+
+/* Lista con viñetas naranjas */
+.faq-list {
+    list-style-type: none;
+    padding-left: 0;
+    margin-bottom: 15px;
+}
+
+.faq-list li {
+    position: relative;
+    padding-left: 20px;
+    margin-bottom: 8px;
+}
+
+.faq-list li::before {
+    content: "●";
+    color: #ff5500;
+    position: absolute;
+    left: 0;
+    font-size: 1rem;
+}
+
+/* Texto destacado entre tarjetas */
+.faq-highlight {
+    text-align: center;
+    font-size: 1.2rem;
+    font-weight: 700;
+    line-height: 1.4;
+    margin: 40px 0;
+    color: white;
+}
+
+/* Adaptación a celulares */
+@media (max-width: 768px) {
+    .title-outline-faq { 
+        font-size: 2.5rem; 
+        -webkit-text-stroke: 6px #ff5500; 
+    }
+    .faq-question { padding: 15px 20px; font-size: 1.1rem; }
+    .faq-answer { padding: 20px; }
+    .faq-highlight { font-size: 1.1rem; }
+}
+
+/* =========================================
+   ESTILOS PARA "SOBRE NOSOTROS"
+   ========================================= */
+
+/* Fondo naranja sólido. Usamos "background" con !important para borrar el degradado verde base */
+body.page-nosotros {
+    background: #ffa100 !important;
+    padding: 0; 
+    color: white;
+}
+
+.content-nosotros {
+    padding: 40px 20px 0 20px;
+    max-width: 900px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+/* Sección Biografía (Foto + Texto) */
+.bio-section {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    max-width: 800px;
+    margin: 0 auto 50px auto;
+    text-align: left;
+}
+
+.bio-image-wrapper {
+    flex-shrink: 0; /* Evita que la foto se aplaste */
+}
+
+/* Efecto Polaroid para la foto */
+.bio-image {
+    width: 250px;
+    height: auto;
+    border: 8px solid white;
+    border-radius: 2px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.25);
+    transform: rotate(-4deg); /* Inclinación de la foto */
+    transition: transform 0.3s ease;
+}
+
+.bio-image:hover {
+    transform: rotate(0deg) scale(1.05); /* Efecto al pasar el cursor */
+}
+
+.bio-text h2 {
+    font-size: 1.4rem;
+    font-weight: 800;
+    margin-bottom: 15px;
+    line-height: 1.3;
+}
+
+.bio-text p {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    font-weight: 500;
+}
+
+/* Tarjeta Blanca */
+.white-card-nosotros {
+    background-color: white;
+    color: #444;
+    padding: 30px 40px;
+    border-radius: 25px;
+    text-align: left;
+    font-size: 0.95rem;
+    line-height: 1.6;
+    font-weight: 600;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+    margin-bottom: 30px;
+}
+
+.nosotros-paragraph {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    font-weight: 500;
+    color: rgba(255, 255, 255, 0.9);
+    margin-bottom: 40px;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.nosotros-highlight {
+    font-size: 1.3rem;
+    font-weight: 800;
+    line-height: 1.5;
+    max-width: 750px;
+    margin: 0 auto 40px auto;
+}
+
+/* Contenedor de la Imagen Inferior (El guacamayo/jaguar) */
+.footer-image-section {
+    position: relative;
+    width: 100%;
+    /* Usamos proporciones relativas al ancho (vw) para evitar el aplastamiento en PC */
+    height: 35vw; 
+    max-height: 550px; /* Límite máximo para que no sea gigante en pantallas enormes */
+    min-height: 300px;
+    margin-top: 50px;
+}
+
+.footer-image-section img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /* Enfocamos un poco más al centro para que el ave no se pierda */
+    object-position: center 40%; 
+    display: block;
+}
+
+/* Ola en la parte superior de la imagen */
+.wave-divider-top {
+    position: absolute;
+    top: -2px; /* Evita líneas no deseadas */
+    left: 0;
+    width: 100%;
+    line-height: 0;
+    z-index: 2;
+}
+
+.wave-divider-top svg {
+    display: block;
+    width: 100%;
+    /* La ola también se adapta proporcionalmente */
+    height: 8vw; 
+    min-height: 50px;
+    max-height: 140px;
+}
+
+/* Adaptación a celulares */
+@media (max-width: 768px) {
+    .bio-section { 
+        flex-direction: column; 
+        text-align: center; 
+        gap: 25px;
+    }
+    .bio-image { width: 200px; }
+    .white-card-nosotros { padding: 25px; }
+    .nosotros-highlight { font-size: 1.1rem; }
+}
+
+/* =========================================
+   ESTILOS EXTRAS PARA "DIFERENCIAS"
+   ========================================= */
+
+/* Textos de introducción */
+.diferencias-text {
+    max-width: 850px;
+    margin: 0 auto 50px auto;
+    text-align: center;
+}
+
+.diferencias-text h3 {
+    font-size: 1.1rem;
+    font-weight: 800;
+    margin-bottom: 15px;
+    color: white;
+    margin-top: 30px;
+}
+
+.diferencias-text p {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+
+/* Contenedor relativo para poder sobreponer la píldora naranja a la tarjeta */
+.card-wrapper-diferencias {
+    position: relative;
+    max-width: 900px;
+    margin: 0 auto;
+    padding-top: 20px; /* Espacio extra para que la píldora no se corte arriba */
+}
+
+/* La píldora naranja sobrepuesta */
+.orange-pill-diferencias {
+    position: absolute;
+    top: 5px; /* Esto empuja la píldora hacia arriba para que quede a la mitad del borde */
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #ff8c00;
+    color: white;
+    padding: 10px 30px;
+    border-radius: 30px;
+    font-weight: 800;
+    font-size: 1rem;
+    z-index: 5; /* Asegura que esté por encima de la tarjeta verde */
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    white-space: nowrap;
+}
+
+/* Ajuste a celulares: si la pantalla es muy chica, el texto largo de la píldora bajará a dos líneas */
+@media (max-width: 768px) {
+    .orange-pill-diferencias {
+        white-space: normal;
+        width: 90%;
+        text-align: center;
+        padding: 10px 15px;
+        top: -10px;
+        font-size: 0.9rem;
+    }
+}
